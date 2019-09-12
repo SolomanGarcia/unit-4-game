@@ -1,20 +1,22 @@
+//start game
 $(document).ready(function() {
 var targetNumber = [Math.round(Math.random() * 54 + 13)];
+$("#number-to-guess").text("Target Score: " + targetNumber);
 console.log(targetNumber);
 var counter = 0;
 var numberOptions = [10, 11];
 var increment = numberOptions[Math.round(Math.random())];
 var num1 = Math.floor(Math.random() * 12 + 1);
-console.log(num1)
 var num2 = Math.floor(Math.random() * 12 + 1);
-console.log(num2)
 var num3 = Math.floor(Math.random() * 12 + 1);
-console.log(num3)
 var num4 = Math.floor(Math.random() * 12 + 1);
+console.log(num1)
+console.log(num2)
+console.log(num3)
 console.log(num4)
 var wins = 0;
 var losses = 0;
-
+//game reset function
 function reset() {
     counter = 0
     targetNumber = [Math.round(Math.random() * 54 + 13)]; 
@@ -24,15 +26,19 @@ function reset() {
     num4 = Math.floor(Math.random() * 12 + 1);
     $("#number-to-guess").text("Target Score: " + targetNumber);
     $("#current-score").text("Current Score: " + counter);
+    console.log(num1);
+    console.log(num2);
+    console.log(num3);
+    console.log(num4);
 }
-
+// You win function
 function youWin() {
     alert("Congratulations, You're a winner! Play Again!");
     wins++;
     $("#wins").text("Number of wins: " + wins);
     reset()
 }
-
+//Your lose function
 function youLose() {
     alert("Sorry you lost. Try again!");
     losses++;

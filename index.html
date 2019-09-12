@@ -1,33 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Crystal Collector Game</title>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
+
 </head>
+
 <body>
-    <div id="main-content">
-        <p id="number-to-guess"></p>
-        <p id="current-score"></p>
-        <p id="wins"></p>
+    <div class="conatiner">
+        <div id="header">
+            <h1>Crystal Collector</h1>
+        </div>
+        <div id="instructions">
+            <p>You will be given a random target number at the start of the game. <br> 
+            There are four crystals below. By clicking on the crystals you will add aspecic amount of points to your current score. <br>
+            You win the game by matching your current score to the target score. You lose by having the value of your current score going above the target score. <br>
+            The value of each crystal is hidden from you until you click on it. <br>
+            Each time the game starts the values of the crystals and the target score will change. <br>
+            </p>
+        </div>
+
+        <div id="main-content">
+            <p id="number-to-guess"></p>
+            <p id="current-score"></p>
+            <p id="wins"></p>
+            <p id="losses"></p>
+        </div>
+
+        <div id="crystals">
+
+            <img id="crystal-image1" src="assets/images/crystal1.jpg" alt="crystal" />
+
+            <img id="crystal-image2" src="assets/images/crystal2.jpg" alt="crystal" />
+
+            <img id="crystal-image3" src="assets/images/crystal3.jpg" alt="crystal" />
+
+            <img id="crystal-image4" src="assets/images/crystal4.jpg" alt="crystal" />
+        </div>
     </div>
-
-    <div id="crystals">
-
-    <img id="crystal-image1" src="assets/images/crystal1.jpg" alt="crystal"/>
-
-    <img id="crystal-image2" src="assets/images/crystal2.jpg" alt="crystal"/>
-
-    <img id="crystal-image3" src="assets/images/crystal3.jpg" alt="crystal"/>
-
-    <img id="crystal-image4" src="assets/images/crystal4.jpg" alt="crystal"/>
-    </div>
-
     <script type="text/javascript" src="assets/javascript/game.js"></script>
-    
+
 </body>
+
 </html>
